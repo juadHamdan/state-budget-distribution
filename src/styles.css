@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@200&family=Roboto&family=Rubik&display=swap");
+
+#app-container {
+  display: flex;
+  justify-content: center;
+  color: hsl(235, 18%, 26%);
+
+  font-family: "Noto Sans Hebrew", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Rubik", sans-serif;
+  height: 100%;
+  background: hsl(235, 18%, 26%);
+}
+
+#app-container .tabs-container {
+  margin: 10% 0;
+  height: max-content;
+  width: max-content;
+  background-color: hsl(0, 0%, 100%);
+  padding: 25px 10px 10px 10px;
+  border-radius: 40px;
+}
+
+#app-container input {
+  font-weight: bold;
+  color: hsl(235, 18%, 26%);
+}
+
+#pie-chart-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.input-container .nis {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.input-container .typed-input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+#pie-chart-container .details {
+  max-height: 250px;
+  overflow-y: scroll;
+  padding-right: 20px;
+}
+
+.input-container .tax-points-text {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-top: 37px;
+  margin-right: 40px;
+}
+
+.input-container .salary-text {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-top: 37px;
+  margin-right: 40px;
+}
+
+#pie-chart-container .details-container .detail-header {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 5px;
+}
+
+#pie-chart-container .details-container .detail {
+  margin: 5px;
+}
+
+#pie-chart-container .header {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+#pie-chart-container .amount {
+  font-weight: bold;
+  font-size: 1.15rem;
+}
+
+#pie-chart-container .percentage {
+  font-weight: bold;
+}
+
+#pie-chart-container .details-container {
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #bfe3f8ff;
+  text-align: right;
+}
+
+@media (max-width: 900px) {
+  #pie-chart-container {
+    flex-direction: column;
+  }
+
+  #pie-chart-container .details-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .tabs-container {
+    padding: 25px 0 0 0;
+  }
+
+  .input-container {
+    flex-direction: column-reverse;
+  }
+
+  #pie-chart-container .header {
+    font-size: 0.85rem;
+  }
+
+  #pie-chart-container .amount {
+    font-size: 0.9rem;
+  }
+
+  #pie-chart-container .percentage {
+    font-size: 0.9rem;
+  }
+}
