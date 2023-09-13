@@ -30,7 +30,6 @@ const calcTax = (salary: number) => {
 };
 
 const calcTaxAmount = (salary: number, taxPoints: number) => {
-  console.log(salary * calcTax(salary) - TAX_POINT_REFUND * taxPoints);
   return salary * calcTax(salary) - TAX_POINT_REFUND * taxPoints;
 };
 
@@ -63,7 +62,7 @@ export default function App() {
               </InputLeftElement>
               <NumberInput
                 className="salary-input"
-                onChange={(value) => setSalary(value)}
+                onChange={(valueAsString: string, valueAsNumber: number) => setSalary(valueAsNumber)}
                 placeholder="משכורת חודשית בשקלים"
                 defaultValue={12669}
                 size="lg"
@@ -86,7 +85,7 @@ export default function App() {
                 width={120}
                 size="lg"
                 defaultValue={taxPoints}
-                onChange={(value) => setTaxPoints(value)}
+                onChange={(valueAsString: string, valueAsNumber: number) => setTaxPoints(valueAsNumber)}
                 min={2.25}
                 max={12}
                 precision={2}

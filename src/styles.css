@@ -1,21 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@200&family=Roboto&family=Rubik&display=swap");
 
-#app-container {
-  display: flex;
-  justify-content: center;
-  color: hsl(235, 18%, 26%);
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(107, 107, 107);
+}
+
+
+body{
+  height: 100vh;
+  background-color: hsl(235, 18%, 26%) !important;
+}
+
+#app-container {
   font-family: "Noto Sans Hebrew", sans-serif;
   font-family: "Roboto", sans-serif;
   font-family: "Rubik", sans-serif;
-  height: 100%;
-  background: hsl(235, 18%, 26%);
+  display: flex;
+  justify-content: center;
+  color: hsl(235, 18%, 26%);
+  background-color: hsl(235, 18%, 26%);
 }
 
 #app-container .tabs-container {
   margin: 10% 0;
-  height: max-content;
-  width: max-content;
   background-color: hsl(0, 0%, 100%);
   padding: 25px 10px 10px 10px;
   border-radius: 40px;

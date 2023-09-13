@@ -1,7 +1,9 @@
 import "./styles.css";
 import React, { useCallback, useState, useEffect } from "react";
 import { PieChart, Pie, Sector, Cell } from "recharts";
-
+import {BudgetInterface} from './Interfaces'
+import { budgetData } from "./budget-data";
+/*
 const budgetData = [
   {
     name: "שירותים חברתיים",
@@ -83,7 +85,7 @@ const budgetData = [
     ]
   }
 ];
-
+*/
 const renderActiveShape = (props: any) => {
   const RADIAN = Math.PI / 180;
   const {
@@ -166,9 +168,13 @@ const renderActiveShape = (props: any) => {
   );
 };
 
-const BudgetPieChart = ({ amount }) => {
+interface BudgetPieChartProps {
+  amount: number
+}
+
+const BudgetPieChart: React.FC<BudgetPieChartProps> = ({ amount }: BudgetPieChartProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<BudgetInterface[]>([]);
 
   const [width, setWidth] = useState<number>(window.innerWidth);
 
@@ -195,14 +201,13 @@ const BudgetPieChart = ({ amount }) => {
 
   useEffect(() => {
     setData(
-      budgetData.map((budget) => {
+      budgetData.map((budget: any) => {
         return {
           ...budget,
           value: Math.round((amount * budget.percent) / 100)
         };
       })
     );
-    console.log("amount changed: ", amount);
   }, [amount]);
 
   return (
@@ -221,7 +226,7 @@ const BudgetPieChart = ({ amount }) => {
           paddingAngle={2}
           onMouseDown={onPieEnter}
         >
-          {data.map((entry, index) => (
+          {data.map((entry: BudgetInterface, index) => (
             <Cell key={`cell-${index}`} fill={entry.color} />
           ))}
         </Pie>
