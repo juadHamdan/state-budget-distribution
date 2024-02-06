@@ -10,7 +10,7 @@ and 1878 NIS per year for transportation.
 
 So I didn't take out a calculator and wasted a few hours on the Knesset website to understand the distribution of the employee's taxes – I just used the website I had been working on for the past few days.
 
-If you want to gain insights and be aware of where everyone's money is going - go to https://lnkd.in/dcVZfCvk site and try it for yourself.
+If you want to gain insights and be aware of where everyone's money is going - go to https://lnkd.in/dcVZfCvk and try it for yourself.
 
 How does the site work? 
 Enter your monthly salary and income tax credits, and you receive a breakdown (monthly/yearly) in NIS regarding the distribution of taxes you pay.
