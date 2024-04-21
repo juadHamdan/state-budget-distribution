@@ -1,6 +1,5 @@
 # state-budget-distribution
 
-
 An employee who earns 15,000 NIS a month with a bachelor's degree (with 3.25 tax credits)
 will pay 470 NIS a month for security and public order, 
 215 NIS per year for the Prime Minister's Office, 
